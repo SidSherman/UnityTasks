@@ -1,0 +1,154 @@
+{
+    "name": "PlayerControlls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "85c1c95a-4485-4e8e-9951-cdd58171a620",
+            "actions": [
+                {
+                    "name": "ChangeWeapon",
+                    "type": "Value",
+                    "id": "51cffdb3-ba60-440a-9920-4455c7fa77d3",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SetAnim1",
+                    "type": "Button",
+                    "id": "1c962db7-edc3-43da-b536-6a8b97ad9fd6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetAnim2",
+                    "type": "Button",
+                    "id": "942efb99-e6e3-4cff-a0ab-28bec45cd36b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetAnim3",
+                    "type": "Button",
+                    "id": "5bf38378-132b-49d2-9787-58f0333af8f5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetAnim4",
+                    "type": "Button",
+                    "id": "51d5b5e9-612d-43ec-bd3c-acc0e81c7aeb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetAnim5",
+                    "type": "Button",
+                    "id": "2e8981e2-74b1-490d-8c03-019b3efd5c60",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SetAnim0",
+                    "type": "Button",
+                    "id": "c620961c-7ff7-465c-a78d-1c1a4a37871b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cc39fd0b-25b9-4bef-8605-f76a961f43f9",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e89cc038-6637-4667-a4f0-3edf2c990bc7",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetAnim1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c95bfafc-d9e8-461a-a93e-a02e5fbdc888",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetAnim2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "645dc309-015d-4204-b193-c17567e05160",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetAnim3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b023e5f9-013b-4a2f-8c3c-ad3eb6c3a4c8",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetAnim4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6ed172e-039b-4a4d-af21-de63fc351177",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetAnim5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0da6242d-cc79-4ac5-abf7-122228c2ad95",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetAnim0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
