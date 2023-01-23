@@ -24,18 +24,9 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
     ""name"": ""PlayerControlls"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""Dancing"",
             ""id"": ""85c1c95a-4485-4e8e-9951-cdd58171a620"",
             ""actions"": [
-                {
-                    ""name"": ""ChangeWeapon"",
-                    ""type"": ""Value"",
-                    ""id"": ""51cffdb3-ba60-440a-9920-4455c7fa77d3"",
-                    ""expectedControlType"": ""Delta"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
                 {
                     ""name"": ""SetAnim1"",
                     ""type"": ""Button"",
@@ -92,17 +83,6 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""cc39fd0b-25b9-4bef-8605-f76a961f43f9"",
-                    ""path"": ""<Mouse>/scroll"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeWeapon"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""e89cc038-6637-4667-a4f0-3edf2c990bc7"",
@@ -170,19 +150,146 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Player"",
+            ""id"": ""3820d3da-330d-40c1-b8b5-8a219f43768e"",
+            ""actions"": [
+                {
+                    ""name"": ""ChangeWeapon"",
+                    ""type"": ""Value"",
+                    ""id"": ""c5ba84c9-578d-40af-9142-1b04ed4e4c20"",
+                    ""expectedControlType"": ""Delta"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""24f748be-9a14-4cf7-8761-3bb3a203d1f0"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""f022c759-3d7d-4523-859c-05e0a0476563"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""3b80ee6a-1683-4345-8560-7d05997baba5"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""f4227df4-18c6-4786-aa84-38d4ab28ecb5"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f0176b91-e3b8-405d-9f09-303fb674085f"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d3285260-b0fd-4b01-a1b2-78c2df403cad"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a27435e4-c578-4171-968b-327fea7e03b4"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""341183c2-d44b-43ab-bfca-db6d89d27be6"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc363439-843a-4a3d-9d9a-0b13500494d9"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)"",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e9b19a3d-3100-4e42-8002-e5b60563f930"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false),StickDeadzone,ScaleVector2(x=300,y=300)"",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
 }");
+        // Dancing
+        m_Dancing = asset.FindActionMap("Dancing", throwIfNotFound: true);
+        m_Dancing_SetAnim1 = m_Dancing.FindAction("SetAnim1", throwIfNotFound: true);
+        m_Dancing_SetAnim2 = m_Dancing.FindAction("SetAnim2", throwIfNotFound: true);
+        m_Dancing_SetAnim3 = m_Dancing.FindAction("SetAnim3", throwIfNotFound: true);
+        m_Dancing_SetAnim4 = m_Dancing.FindAction("SetAnim4", throwIfNotFound: true);
+        m_Dancing_SetAnim5 = m_Dancing.FindAction("SetAnim5", throwIfNotFound: true);
+        m_Dancing_SetAnim0 = m_Dancing.FindAction("SetAnim0", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_ChangeWeapon = m_Player.FindAction("ChangeWeapon", throwIfNotFound: true);
-        m_Player_SetAnim1 = m_Player.FindAction("SetAnim1", throwIfNotFound: true);
-        m_Player_SetAnim2 = m_Player.FindAction("SetAnim2", throwIfNotFound: true);
-        m_Player_SetAnim3 = m_Player.FindAction("SetAnim3", throwIfNotFound: true);
-        m_Player_SetAnim4 = m_Player.FindAction("SetAnim4", throwIfNotFound: true);
-        m_Player_SetAnim5 = m_Player.FindAction("SetAnim5", throwIfNotFound: true);
-        m_Player_SetAnim0 = m_Player.FindAction("SetAnim0", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -239,64 +346,56 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_ChangeWeapon;
-    private readonly InputAction m_Player_SetAnim1;
-    private readonly InputAction m_Player_SetAnim2;
-    private readonly InputAction m_Player_SetAnim3;
-    private readonly InputAction m_Player_SetAnim4;
-    private readonly InputAction m_Player_SetAnim5;
-    private readonly InputAction m_Player_SetAnim0;
-    public struct PlayerActions
+    // Dancing
+    private readonly InputActionMap m_Dancing;
+    private IDancingActions m_DancingActionsCallbackInterface;
+    private readonly InputAction m_Dancing_SetAnim1;
+    private readonly InputAction m_Dancing_SetAnim2;
+    private readonly InputAction m_Dancing_SetAnim3;
+    private readonly InputAction m_Dancing_SetAnim4;
+    private readonly InputAction m_Dancing_SetAnim5;
+    private readonly InputAction m_Dancing_SetAnim0;
+    public struct DancingActions
     {
         private @PlayerControlls m_Wrapper;
-        public PlayerActions(@PlayerControlls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @ChangeWeapon => m_Wrapper.m_Player_ChangeWeapon;
-        public InputAction @SetAnim1 => m_Wrapper.m_Player_SetAnim1;
-        public InputAction @SetAnim2 => m_Wrapper.m_Player_SetAnim2;
-        public InputAction @SetAnim3 => m_Wrapper.m_Player_SetAnim3;
-        public InputAction @SetAnim4 => m_Wrapper.m_Player_SetAnim4;
-        public InputAction @SetAnim5 => m_Wrapper.m_Player_SetAnim5;
-        public InputAction @SetAnim0 => m_Wrapper.m_Player_SetAnim0;
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public DancingActions(@PlayerControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @SetAnim1 => m_Wrapper.m_Dancing_SetAnim1;
+        public InputAction @SetAnim2 => m_Wrapper.m_Dancing_SetAnim2;
+        public InputAction @SetAnim3 => m_Wrapper.m_Dancing_SetAnim3;
+        public InputAction @SetAnim4 => m_Wrapper.m_Dancing_SetAnim4;
+        public InputAction @SetAnim5 => m_Wrapper.m_Dancing_SetAnim5;
+        public InputAction @SetAnim0 => m_Wrapper.m_Dancing_SetAnim0;
+        public InputActionMap Get() { return m_Wrapper.m_Dancing; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
-        public void SetCallbacks(IPlayerActions instance)
+        public static implicit operator InputActionMap(DancingActions set) { return set.Get(); }
+        public void SetCallbacks(IDancingActions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
+            if (m_Wrapper.m_DancingActionsCallbackInterface != null)
             {
-                @ChangeWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
-                @ChangeWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
-                @ChangeWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
-                @SetAnim1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim1;
-                @SetAnim1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim1;
-                @SetAnim1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim1;
-                @SetAnim2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim2;
-                @SetAnim2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim2;
-                @SetAnim2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim2;
-                @SetAnim3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim3;
-                @SetAnim3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim3;
-                @SetAnim3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim3;
-                @SetAnim4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim4;
-                @SetAnim4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim4;
-                @SetAnim4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim4;
-                @SetAnim5.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim5;
-                @SetAnim5.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim5;
-                @SetAnim5.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim5;
-                @SetAnim0.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim0;
-                @SetAnim0.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim0;
-                @SetAnim0.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSetAnim0;
+                @SetAnim1.started -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim1;
+                @SetAnim1.performed -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim1;
+                @SetAnim1.canceled -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim1;
+                @SetAnim2.started -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim2;
+                @SetAnim2.performed -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim2;
+                @SetAnim2.canceled -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim2;
+                @SetAnim3.started -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim3;
+                @SetAnim3.performed -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim3;
+                @SetAnim3.canceled -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim3;
+                @SetAnim4.started -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim4;
+                @SetAnim4.performed -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim4;
+                @SetAnim4.canceled -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim4;
+                @SetAnim5.started -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim5;
+                @SetAnim5.performed -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim5;
+                @SetAnim5.canceled -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim5;
+                @SetAnim0.started -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim0;
+                @SetAnim0.performed -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim0;
+                @SetAnim0.canceled -= m_Wrapper.m_DancingActionsCallbackInterface.OnSetAnim0;
             }
-            m_Wrapper.m_PlayerActionsCallbackInterface = instance;
+            m_Wrapper.m_DancingActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @ChangeWeapon.started += instance.OnChangeWeapon;
-                @ChangeWeapon.performed += instance.OnChangeWeapon;
-                @ChangeWeapon.canceled += instance.OnChangeWeapon;
                 @SetAnim1.started += instance.OnSetAnim1;
                 @SetAnim1.performed += instance.OnSetAnim1;
                 @SetAnim1.canceled += instance.OnSetAnim1;
@@ -318,15 +417,69 @@ public partial class @PlayerControlls : IInputActionCollection2, IDisposable
             }
         }
     }
-    public PlayerActions @Player => new PlayerActions(this);
-    public interface IPlayerActions
+    public DancingActions @Dancing => new DancingActions(this);
+
+    // Player
+    private readonly InputActionMap m_Player;
+    private IPlayerActions m_PlayerActionsCallbackInterface;
+    private readonly InputAction m_Player_ChangeWeapon;
+    private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Look;
+    public struct PlayerActions
     {
-        void OnChangeWeapon(InputAction.CallbackContext context);
+        private @PlayerControlls m_Wrapper;
+        public PlayerActions(@PlayerControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ChangeWeapon => m_Wrapper.m_Player_ChangeWeapon;
+        public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerActions instance)
+        {
+            if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
+            {
+                @ChangeWeapon.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
+                @ChangeWeapon.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
+                @ChangeWeapon.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeWeapon;
+                @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+            }
+            m_Wrapper.m_PlayerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ChangeWeapon.started += instance.OnChangeWeapon;
+                @ChangeWeapon.performed += instance.OnChangeWeapon;
+                @ChangeWeapon.canceled += instance.OnChangeWeapon;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+            }
+        }
+    }
+    public PlayerActions @Player => new PlayerActions(this);
+    public interface IDancingActions
+    {
         void OnSetAnim1(InputAction.CallbackContext context);
         void OnSetAnim2(InputAction.CallbackContext context);
         void OnSetAnim3(InputAction.CallbackContext context);
         void OnSetAnim4(InputAction.CallbackContext context);
         void OnSetAnim5(InputAction.CallbackContext context);
         void OnSetAnim0(InputAction.CallbackContext context);
+    }
+    public interface IPlayerActions
+    {
+        void OnChangeWeapon(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
     }
 }

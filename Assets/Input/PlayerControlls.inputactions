@@ -2,18 +2,9 @@
     "name": "PlayerControlls",
     "maps": [
         {
-            "name": "Player",
+            "name": "Dancing",
             "id": "85c1c95a-4485-4e8e-9951-cdd58171a620",
             "actions": [
-                {
-                    "name": "ChangeWeapon",
-                    "type": "Value",
-                    "id": "51cffdb3-ba60-440a-9920-4455c7fa77d3",
-                    "expectedControlType": "Delta",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
                 {
                     "name": "SetAnim1",
                     "type": "Button",
@@ -70,17 +61,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "cc39fd0b-25b9-4bef-8605-f76a961f43f9",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeWeapon",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "e89cc038-6637-4667-a4f0-3edf2c990bc7",
@@ -144,6 +124,129 @@
                     "processors": "",
                     "groups": "",
                     "action": "SetAnim0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "id": "3820d3da-330d-40c1-b8b5-8a219f43768e",
+            "actions": [
+                {
+                    "name": "ChangeWeapon",
+                    "type": "Value",
+                    "id": "c5ba84c9-578d-40af-9142-1b04ed4e4c20",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "24f748be-9a14-4cf7-8761-3bb3a203d1f0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "f022c759-3d7d-4523-859c-05e0a0476563",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3b80ee6a-1683-4345-8560-7d05997baba5",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "f4227df4-18c6-4786-aa84-38d4ab28ecb5",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "f0176b91-e3b8-405d-9f09-303fb674085f",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d3285260-b0fd-4b01-a1b2-78c2df403cad",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "a27435e4-c578-4171-968b-327fea7e03b4",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "341183c2-d44b-43ab-bfca-db6d89d27be6",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "dc363439-843a-4a3d-9d9a-0b13500494d9",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e9b19a3d-3100-4e42-8002-e5b60563f930",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false),StickDeadzone,ScaleVector2(x=300,y=300)",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

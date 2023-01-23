@@ -13,5 +13,13 @@ public class PlayerAnimController : MonoBehaviour
     {
         _animator.SetInteger("AnimState", value);
     }
+    public void SetVelocity(float value)
+    {
+        _animator.SetFloat("Velocity", value);
+    }
+    public void SetTalk(bool value)
+    {
+        _animator.SetBool("Talk", value);
+    }
    
 }
